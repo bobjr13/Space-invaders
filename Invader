@@ -15,11 +15,13 @@ class Ship():
         self.screen = Screen
 
         # Load the ship image and get its rect
-        self.image = pygame.image.load('ship.bmp')
+        image = ["C:\Users\nplle\Desktop\python\Space invaders\ship.bmp"]
+        self.image = pygame.image.load(image)
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom center of the screen
         self.screen.blit(self.image, (self.rect.centerx, self.rect.bottom))
+
 
 def blitme(self):
     self.screen.blit(self.image, self.rect)
@@ -47,7 +49,7 @@ def run_game():
 
         # Redraw the screen during each pass through the loop.
         screen.fill(ai_settings.bg_color)
-        ship.blitme()
+        blitme('self')
         # Make the most recently drawn screen visible.
         pygame.display.flip()
 
